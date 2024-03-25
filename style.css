@@ -16,8 +16,7 @@ body{
     justify-content: center;
 }
 .setting-container{
-    
-    width: 90%;
+    width: 95vw;
     height: auto;
     padding: 3em 5em;
     display: flex;
@@ -25,7 +24,6 @@ body{
     justify-content: center;
     border-radius: 30px;
     background-color: #00000011;
-    margin: 1em 0;
 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -49,12 +47,12 @@ body{
     margin-left: auto;
 }
 .main-container{
-    width: 90%;
+    width: 95vw;
     height: auto;
     max-height: 45em;
     padding: 1.5em 5em;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: auto auto auto auto auto;
     gap: 2em;
     justify-content: center;align-items: center;
     border-radius: 30px;
@@ -95,17 +93,64 @@ body{
 .sign-symbol{
     text-align: end;
 }
+.container_checkbox-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.settings-card{
+    width: 95vw;
+    height: auto;
+    max-height: 15em;
+
+    border-radius: 10px;
+
+    background-color: #00000011;
+    overflow: hidden;
+    overflow-y: auto;
+
+    padding: 1.5em 1em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    
+}
+.checkbox-card{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.checkbox-card + label{
+    height: 5em;
+    width: 3.5em;
+    background-color: #ffffff;
+    border: 3px solid #b8b8b8;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin: 0 0.2em;
+}
+.checkbox-card:checked + label{
+    opacity: 0.5;
+}
 @media(max-width: 1520px){
     .main-container{
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: auto auto auto auto;
         gap: 2em;
     }
 }
 @media(max-width: 1200px){
     .main-container{
         display: grid;
-        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: auto auto auto;
         gap: 2em;
     }.input{
         font-size: 1.7em;
@@ -115,5 +160,9 @@ body{
     }
     .input_but{
         font-size: 1.3em;
+    }
+    .settings-card{
+        gap: 0.3em;
+        
     }
 }
