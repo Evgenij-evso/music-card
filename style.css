@@ -139,9 +139,11 @@ body{
     align-items: center;
     font-size: 2em;
     margin: 0 0.2em;
+
+    opacity: 0.5;
 }
 .checkbox-card:checked + label{
-    opacity: 0.5;
+    opacity: 1;
 }
 @media(max-width: 1520px){
     .main-container{
