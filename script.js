@@ -64,15 +64,16 @@ function randomaiz_cards(){
 }
 let septaccord_list = ['б.маж','б.мин','м.маж','м.мин','м.ум','ум']
 let septaccord_list_important = ['б.маж','б.мин','м.маж','м.мин','м.ум','ум']
-let sumbol_list_septaccord = ['7']
+
 function randomaiz_cards_septaccord(){
     let random_septaccord = getRandomInt(septaccord_list.length)
-    let random_sumbol = getRandomInt(sumbol_list_septaccord.length)
+    let random_sumbol = getRandomInt(tonality_list.length)
     let card = document.createElement("div");
     card.className = 'card-music'
     card.innerHTML = `
-        <span class="text-card-music sign-symbol-septaccord">${sumbol_list_septaccord[random_sumbol]}</span>
-        <span class="text-card-music name-tonality-septaccord">${septaccord_list[random_septaccord]}</span>`
+        <span class="text-card-music name-tonality-septaccord">${septaccord_list[random_septaccord]}</span>
+        <span class="text-card-music sign-symbol-septaccord">${tonality_list[random_sumbol]}</span>
+        `
     card_container.append(card);
     septaccord_list.splice(random_septaccord,1)
     if(septaccord_list.length <= 0){
@@ -108,6 +109,7 @@ add_card.addEventListener('click',function(){
 })
 
 add_card_septaccord.addEventListener('click',function(){
+    get_tonality_list()
     card_container.innerHTML = ''
     for(let i = 0; i < num_cards_septaccord.value; i++){
         randomaiz_cards_septaccord()

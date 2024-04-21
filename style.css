@@ -95,14 +95,16 @@ body{
 }
 .name-tonality-septaccord{
     position: relative;
-    bottom: 0.4em;
+    top: 0.4em;
     font-size: 4em;
 }
 .sign-symbol{
     text-align: end;
 }
 .sign-symbol-septaccord{
-    text-align: end;
+    position: relative;
+    top: 0.4em;
+    text-align: center;
     font-size: 4em
 }
 .container_checkbox-card{
