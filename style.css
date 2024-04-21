@@ -93,8 +93,17 @@ body{
     bottom: 0.4em;
     font-size: 7em;
 }
+.name-tonality-septaccord{
+    position: relative;
+    bottom: 0.4em;
+    font-size: 4em;
+}
 .sign-symbol{
     text-align: end;
+}
+.sign-symbol-septaccord{
+    text-align: end;
+    font-size: 4em
 }
 .container_checkbox-card{
     display: flex;
@@ -144,6 +153,45 @@ body{
 }
 .checkbox-card:checked + label{
     opacity: 1;
+}
+.radio-but-settign_container{
+    width: 95vw;
+    height: 10em;
+    max-height: 30em;
+    padding: 1.5em 1em;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radio-but_menu {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.radio-but_menu + label{
+    min-width: 6em;
+    padding: 2em;
+    background-color: #ffffff;
+    border: 2px solid #b8b8b8;
+    border-radius: 10px;
+    text-align: center;
+}
+.radio-but_menu:checked + label{
+    background-color: #b8b8b8;
+}
+.radio-container{
+    width: auto;
+    height: auto;
+}
+.tab-2{
+    display: none;
+}
+.label-input{
+    height: max-content;
+    margin-top: auto;
+    margin-bottom: 0;
 }
 @media(max-width: 1520px){
     .main-container{
@@ -225,6 +273,21 @@ body{
     .label-input{
         font-size: 1.1em;
     }
+    .input_but{
+        font-size: 0.9em;
+    }
+    .input{
+        font-size: 0.9em;
+    }
+
+    .radio-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .radio-but-settign_container{
+        height: 15em;
+    }
 }
 @media(max-width:420px){
     .settings-card{
@@ -263,5 +326,8 @@ body{
     }
     .card-music{
         font-size: 0.4em;
+    }
+    .radio-but-settign_container{
+        display: none;
     }
 }
