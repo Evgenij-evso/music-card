@@ -9,37 +9,61 @@
 }
 body{
     height: 100vh;
-    background-color: white;
+    background-color: #CAD2C5;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-.setting-container{
-    width: 95vw;
+main{
+    width: 100vw;
+    height: 3em;
+    display: flex;
+    padding: 0 1em;
+    background-color: #84A98C;
+}
+.display-accords{
+    width: 50em;
     height: auto;
-    padding: 3em 5em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+}
+.logo{
+    width: 1.5em;
+    font-size: 2em;
+    color: #CAD2C5;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
-    background-color: #00000011;
-
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    rotate: 10deg;
+}
+.setting-container{
+    width: 100%;
+    height: auto;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: #84A98C;
+    margin-bottom: 1em;
 }
 .input{
     width: auto;
     max-width: 3em;
+
+    height: 2em;
     border: 0;
-    border-bottom: 1px solid black;
-    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #CAD2C5;
+    background-color: #cad2c50c;
     text-align: center;
+    margin-top: auto;
+    margin-bottom: 5px;
 }
 
 .input_but{
     padding: 0.5em;
-    background-color: rgb(32, 32, 32);
+    background-color: #52796F;
 
     border-radius: 50%;
     color: white;
@@ -50,27 +74,26 @@ body{
     
 }
 .main-container{
-    width: 95vw;
+    width: 100%;
     height: auto;
-    max-height: 45em;
+    max-height: 20em;
     padding: 1.5em 1em;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     gap: 2em;
     justify-content: center;align-items: center;
-    border-radius: 30px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: #00000011;
+    border-radius: 2px;
+    background-color: #84A98C;
     overflow: hidden;
     overflow-y: auto;
+    scrollbar-width: none; 
 }
 .card-music{
-    width: 15em;
-    height: 20em;
+    width: 8em;
+    height: 10em;
 
-    background-color: #ffffff;
-    border: 3px solid #b8b8b8;
+    background-color: #93b69a;
+    border: 2px solid #CAD2C5;
     border-radius: 15px;
 
     display: flex;
@@ -83,7 +106,7 @@ body{
 .text-card-music{
     width: 100%;
     height: min-content;
-    font-size: 5em;
+    font-size: 2em;
     text-align: center;
     
 
@@ -91,12 +114,13 @@ body{
 .name-tonality{
     position: relative;
     bottom: 0.4em;
-    font-size: 7em;
+    font-size: 3em;
 }
 .name-tonality-septaccord{
     position: relative;
     top: 0.4em;
-    font-size: 4em;
+    font-size: 2em;
+    width: auto;
 }
 .sign-symbol{
     text-align: end;
@@ -105,7 +129,8 @@ body{
     position: relative;
     top: 0.4em;
     text-align: center;
-    font-size: 4em
+    font-size: 2em;
+    font-weight: 600;
 }
 .container_checkbox-card{
     display: flex;
@@ -113,24 +138,24 @@ body{
     justify-content: center;
 }
 .settings-card{
-    width: 95vw;
+    width: 100%;
     height: auto;
     max-height: 15em;
 
-    border-radius: 10px;
+    border-radius: 2px;
 
-    background-color: #00000011;
+    background-color: #84A98C;
     overflow: hidden;
     overflow-y: auto;
 
     padding: 1.5em 1em;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
-    gap: 2em;
+    gap: 0.3em;
     justify-content: center;
     align-items: center;
-    margin: 1em 0;
-    
+    margin-bottom: 1em;
+    scrollbar-width: none; 
 }
 .checkbox-card{
     width: 0;
@@ -138,12 +163,12 @@ body{
     visibility: hidden;
 }
 .checkbox-card + label{
-    height: 5em;
-    width: 3.5em;
-    background-color: #ffffff;
-    border: 3px solid #b8b8b8;
+    height: 4em;
+    width: 3em;
+    background-color: #93b69a;
+    border: 2px solid #CAD2C5;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     display: flex;
     justify-content: center;
@@ -156,16 +181,22 @@ body{
 .checkbox-card:checked + label{
     opacity: 1;
 }
-.radio-but-settign_container{
-    width: 95vw;
-    height: 10em;
-    max-height: 30em;
-    padding: 1.5em 1em;
 
-
+.nav_menu{
+    width: auto;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.list_menu{
+    width: auto;
+    display: flex;
+}
+.item_menu{
+    min-width: 8em;
+    width:auto ;
+    height: 100%;
+    list-style: none;
+    display: flex;
 }
 .radio-but_menu {
     visibility: hidden;
@@ -173,39 +204,39 @@ body{
     height: 0;
 }
 .radio-but_menu + label{
-    min-width: 6em;
-    padding: 2em;
-    background-color: #ffffff;
-    border: 2px solid #b8b8b8;
-    border-radius: 10px;
-    text-align: center;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #ffffff00;
+    color: #CAD2C5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .radio-but_menu:checked + label{
-    background-color: #b8b8b8;
+    border-bottom: 2px solid #CAD2C5;
 }
-.radio-container{
-    width: auto;
-    height: auto;
+
+.label-input{
+    color: #CAD2C5;
+    height: max-content;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+.tabs {
+    display: flex;
+    width: 100%;
 }
 .tab-2{
     display: none;
 }
-.label-input{
-    height: max-content;
-    margin-top: auto;
-    margin-bottom: 0;
-}
 @media(max-width: 1520px){
     .main-container{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
         gap: 2em;
     }
 }
 @media(max-width: 1200px){
     .main-container{
-        display: grid;
-        grid-template-columns: auto auto auto;
         gap: 2em;
     }.input{
         font-size: 1.7em;
@@ -233,6 +264,15 @@ body{
     .card-music{
         font-size: 0.8em;
     }
+    .display-accords{
+        width: 40em;
+    }
+    .main-container{
+        gap: 1em;
+    }
+    .card-music{
+        border-radius: 10px;
+    }
 }
 @media(max-width:700px){
     .settings-card{
@@ -246,6 +286,9 @@ body{
     }
 }
 @media(max-width:640px){
+    .display-accords{
+        width: 30em;
+    }
     .setting-container{
         padding: 1em 1.5em;
     }
@@ -290,8 +333,17 @@ body{
     .radio-but-settign_container{
         height: 15em;
     }
+    .display-accords{
+        width: 25em;
+    }
+    .card-music{
+        border-radius: 5px;
+    }
 }
 @media(max-width:420px){
+    .display-accords{
+        width: 23em;
+    }
     .settings-card{
         gap: 0;
     }
@@ -310,6 +362,9 @@ body{
     }
 }
 @media(max-width:372px){
+    .display-accords{
+        width: 21em;
+    }
     .checkbox-card + label{
         font-size: 0.7em;
     }
@@ -321,13 +376,20 @@ body{
     .setting-container{
         display: none;
     }
+    main{
+        display: none;
+    }
     .main-container{
+        position: absolute;
         grid-template-columns: auto auto auto auto auto;
         border-radius: 0;
         width: 100vw;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
     }
     .card-music{
-        font-size: 0.4em;
+        font-size: 0.8em;
     }
     .radio-but-settign_container{
         display: none;

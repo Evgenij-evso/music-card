@@ -7,65 +7,76 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pixelify+Sans&family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <title>Музыкальные кра кра</title>
 </head> 
 <body>
-    <div class="radio-but-settign_container">
-        <div class="radio-container">
-            <input checked class="radio-but_menu" type="radio" name="accords" value="accords-classic" id="accords-classic">
-            <label for="accords-classic">Классические карты</label>
-            <input class="radio-but_menu" type="radio" name="accords" value="sept-accords" id="sept-accords">
-            <label for="sept-accords">Септ аккорды</label>
+    <main>
+        <span class="material-symbols-outlined logo">music_note</span>
+        <nav class="nav_menu">
+            <ul class="list_menu">
+                <li class="item_menu">
+                    <input checked class="radio-but_menu" type="radio" name="accords" value="accords-classic" id="accords-classic">
+                    <label for="accords-classic">Классические карты</label>
+                </li>
+                <li class="item_menu">
+                    <input class="radio-but_menu" type="radio" name="accords" value="sept-accords" id="sept-accords">
+                    <label for="sept-accords">Септ аккорды</label>
+                </li>
+            </ul>
+        </nav>
+    </main>
+    <div class="display-accords">
+
+        <div class="setting-container">
+            <div class="tabs tab-1">
+                <label class="label-input" for="num-cards">Количество кард: </label>
+                <input class="input" min="5" max="50" type="number" name="" id="num-cards">
+                <button class="input_but material-symbols-outlined" id="but-add-cards-classic">restart_alt</but>
+            </div>
+            <div class="tabs tab-2">
+                <label class="label-input" for="num-cards">Количество септаккродов: </label>
+                <input class="input" min="5" max="50" type="number" name="" id="num-cards-septaccord">
+                <button class="input_but material-symbols-outlined" id="but-add-cards-septaccords">restart_alt</but>
+            </div>
         </div>
-    </div>
-    <div class="setting-container">
-        <div class="tabs tab-1">
-            <label class="label-input" for="num-cards">Количество кард: </label>
-            <input class="input" min="5" max="50" type="number" name="" id="num-cards">
-            <button class="input_but material-symbols-outlined" id="but-add-cards-classic">restart_alt</but>
+        <div class="settings-card">
+            <div class="container_checkbox-card">
+                <input class="checkbox-card" type="checkbox" name="" id="C-card-settings" value="C" checked>
+                <label for="C-card-settings">C</label>
+            </div>
+            <div class="container_checkbox-card">
+                <input class="checkbox-card" type="checkbox" name="" id="D-card-settings" value="D" checked>
+                <label for="D-card-settings">D</label>
+            </div>
+            <div class="container_checkbox-card">
+                <input class="checkbox-card" type="checkbox" name="" id="E-card-settings" value="E" checked>
+                <label for="E-card-settings">E</label>
+            </div>
+            <div class="container_checkbox-card">
+                <input class="checkbox-card" type="checkbox" name="" id="F-card-settings" value="F" checked>
+                <label for="F-card-settings">F</label>
+            </div>
+            <div class="container_checkbox-card">
+                <input class="checkbox-card" type="checkbox" name="" id="G-card-settings" value="G" checked>
+                <label for="G-card-settings">G</label>
+            </div>
+            <div class="container_checkbox-card">
+                <input class="checkbox-card" type="checkbox" name="" id="A-card-settings" value="A" checked>
+                <label for="A-card-settings">A</label>
+            </div>
+            <div class="container_checkbox-card">
+                <input class="checkbox-card" type="checkbox" name="" id="H-card-settings" value="H" checked>
+                <label for="H-card-settings">H</label>
+            </div>
         </div>
-        <div class="tabs tab-2">
-            <label class="label-input" for="num-cards">Количество септаккродов: </label>
-            <input class="input" min="5" max="50" type="number" name="" id="num-cards-septaccord">
-            <button class="input_but material-symbols-outlined" id="but-add-cards-septaccords">restart_alt</but>
+        <div class="main-container">
+            <!-- <div class="card-music">
+                <span class="text-card-music sign-symbol">♭</span>
+                <span class="text-card-music name-tonality">С</span>
+            </div> -->
         </div>
-    </div>
-    <div class="settings-card">
-        <div class="container_checkbox-card">
-            <input class="checkbox-card" type="checkbox" name="" id="C-card-settings" value="C" checked>
-            <label for="C-card-settings">C</label>
-        </div>
-        <div class="container_checkbox-card">
-            <input class="checkbox-card" type="checkbox" name="" id="D-card-settings" value="D" checked>
-            <label for="D-card-settings">D</label>
-        </div>
-        <div class="container_checkbox-card">
-            <input class="checkbox-card" type="checkbox" name="" id="E-card-settings" value="E" checked>
-            <label for="E-card-settings">E</label>
-        </div>
-        <div class="container_checkbox-card">
-            <input class="checkbox-card" type="checkbox" name="" id="F-card-settings" value="F" checked>
-            <label for="F-card-settings">F</label>
-        </div>
-        <div class="container_checkbox-card">
-            <input class="checkbox-card" type="checkbox" name="" id="G-card-settings" value="G" checked>
-            <label for="G-card-settings">G</label>
-        </div>
-        <div class="container_checkbox-card">
-            <input class="checkbox-card" type="checkbox" name="" id="A-card-settings" value="A" checked>
-            <label for="A-card-settings">A</label>
-        </div>
-        <div class="container_checkbox-card">
-            <input class="checkbox-card" type="checkbox" name="" id="H-card-settings" value="H" checked>
-            <label for="H-card-settings">H</label>
-        </div>
-    </div>
-    <div class="main-container">
-        <!-- <div class="card-music">
-            <span class="text-card-music sign-symbol">♭</span>
-            <span class="text-card-music name-tonality">С</span>
-        </div> -->
     </div>
     <script src="script.js"></script>
 </body>

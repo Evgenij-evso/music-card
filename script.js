@@ -34,7 +34,7 @@ for(let i = 0; i < radio_but_menu.length; i++){
         if(this.value == 'accords-classic'){
             tab_1.style.display = 'flex'
             tab_2.style.display = 'none'
-            settings_card.style.display = 'flex'
+            settings_card.style.display = 'grid'
         }
         else if(this.value == 'sept-accords'){
             tab_2.style.display = 'flex'
